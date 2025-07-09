@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import Header from "@/components/layout/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Card className="bg-slate-950 h-screen text-white font-medium">
+          <CardHeader>
+            <Header />
+          </CardHeader>
+          <CardContent>{children}</CardContent>
+        </Card>
+      </body>
     </html>
   );
 }
