@@ -1,16 +1,12 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import HeroSection from "@/components/ui/HeroSection";
+import MainSection from "@/components/ui/MainSection";
 import React from "react";
 
 const Home = () => {
   return (
-    <div>
-      <Card className="flex w-fit">
-        <CardHeader className="w-[10rem]">
-          <HeroSection />
-        </CardHeader>
-        <CardContent></CardContent>
-      </Card>
+    <div className="flex gap-[2rem] justify-center">
+      <HeroSection />
+      <MainSection />
     </div>
   );
 };

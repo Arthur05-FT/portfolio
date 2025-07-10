@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { CardDescription, CardTitle } from "@/components/ui/card";
 import { Facebook, Github, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 
@@ -83,22 +82,22 @@ const HeroSection = () => {
       name: "Youtube",
       icon: <Youtube />,
       href: "/",
-      username: "@MrPatateDev",
+      username: "MrPatate Dev",
     },
   ];
   return (
     <div>
-      <div className="w-[10rem] flex rounded-full border-4 border-blue-600 h-[10rem] bg-[url(/profile.png)] bg-center bg-cover"></div>
-      <CardTitle className="flex flex-col items-center gap-2 text-start mt-[0.9rem]">
+      <div className="w-[15rem] flex rounded-full border-4 border-blue-600 h-[15rem] bg-[url(/profile.png)] bg-center bg-cover"></div>
+      <div className="flex flex-col items-center text-start mt-[0.9rem]">
         <span className="w-full">Arthur Jordy</span>
         <span className="w-full text-sm text-slate-400">
           Fullstack developer
         </span>
-      </CardTitle>
-      <Button className="bg-blue-600 cursor-pointer hover:bg-blue-700 transition duration-100">
+      </div>
+      <Button className="bg-blue-600 w-fit cursor-pointer hover:bg-blue-700 transition mt-2 duration-100">
         arthurfotso.bfkg@gmail.com
       </Button>
-      <CardDescription className="mt-[1rem]">
+      <div className="mt-[1rem]">
         <span className="text-xs">20 ans - Cameroun, Bafoussam</span>
         <div className="mt-4 flex flex-col gap-2">
           <span className="font-bold">Languages</span>
@@ -134,7 +133,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-      </CardDescription>
+      </div>
     </div>
   );
 };
