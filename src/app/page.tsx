@@ -1,14 +1,13 @@
-import Header from "@/components/layout/Header";
-import { Card, CardHeader } from "@/components/ui/card";
+import HeroSection from "@/components/ui/HeroSection";
+import MainSection from "@/components/ui/MainSection";
 import React from "react";
 
 const Home = () => {
   return (
-    <Card className="bg-neutral-950 h-screen text-neutral-300 font-medium">
-      <CardHeader>
-        <Header />
-      </CardHeader>
-    </Card>
+    <div className="flex gap-[2rem] justify-center">
+      <HeroSection />
+      <MainSection />
+    </div>
   );
 };
 
