@@ -126,13 +126,18 @@ const Skills = () => {
     },
   ];
   return (
-    <div className="flex gap-4 flex-wrap items-center">
-      {skills.map((skill, index) => (
-        <Button className="bg-slate-800" key={index}>
-          {skill.icon}
-          {skill.name}
-        </Button>
-      ))}
+    <div className="flex flex-col gap-4">
+      <span className="border w-fit px-4 rounded border-neutral-800 text-slate-400">
+        Skills
+      </span>
+      <div className="flex gap-4 flex-wrap items-center">
+        {skills.map((skill, index) => (
+          <Button className="bg-slate-800" key={index}>
+            {skill.icon}
+            {skill.name}
+          </Button>
+        ))}
+      </div>
     </div>
   );
 };
