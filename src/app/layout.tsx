@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
-import Background from "@/components/ui/Background";
+import { GridSmallBackgroundDemo } from "@/components/ui/componentPage/GridSmallBackgroundDemo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="h-screen relative text-white font-medium">
+        <div className="h-screen relative text-white">
           <div className="py-4">
-            <Background />
+            <GridSmallBackgroundDemo />
             <Header />
           </div>
           <div>{children}</div>

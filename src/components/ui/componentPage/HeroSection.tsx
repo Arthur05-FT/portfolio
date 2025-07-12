@@ -71,13 +71,6 @@ const HeroSection = () => {
       username: "Arthur05-FT",
     },
     {
-      id: 3,
-      name: "Facebook",
-      icon: <Facebook />,
-      href: "/",
-      username: "MrPatateDev",
-    },
-    {
       id: 4,
       name: "Youtube",
       icon: <Youtube />,
@@ -114,7 +107,7 @@ const HeroSection = () => {
                 <Link
                   key={link.id}
                   href={link.href}
-                  className="flex items-center p-1 rounded-full gap-2 hover:bg-blue-700 transition duration-100"
+                  className="flex items-center p-1.5 rounded-full gap-2 hover:bg-blue-700 transition duration-100"
                   onMouseEnter={() => setIsHover(link.id)}
                   onMouseLeave={() => setIsHover(0)}
                 >

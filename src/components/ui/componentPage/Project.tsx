@@ -38,6 +38,7 @@ const Project = () => {
     {
       id: 3,
       title: "Thinkify",
+      icon: "💭",
       description:
         "Thinkify is a social media platform that allows users to share their thoughts, ideas, and experiences with others.",
       languages: [
@@ -62,6 +63,7 @@ const Project = () => {
     {
       id: 4,
       title: "All in One",
+      icon: "🛒",
       description:
         "All in One is a eCommerce platform that allows users to buy and sell products online.",
       languages: [
@@ -86,20 +88,22 @@ const Project = () => {
   ];
   return (
     <div>
-      <h1 className="text-2xl uppercase mb-6">Projects ({projects.length})</h1>
+      <h1 className="text-2xl font-medium uppercase mb-6">
+        Projects ({projects.length})
+      </h1>
       <div>
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div
             key={project.id}
-            className="flex flex-col gap-2 border rounded border-neutral-800 p-5 mb-5"
+            className="flex flex-col gap-4 rounded p-5 mb-5"
           >
-            <h2 className="text-xl font-semibold">{project.title}</h2>
-            <div className="flex gap-5 mt-2">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">{project.icon}</span>
+              <h2 className="text-xl font-semibold">{project.title}</h2>
+            </div>
+            <div className="flex gap-4">
               {project.languages.map((lang, index) => (
-                <span
-                  key={index}
-                  className="pl-5 relative flex items-center gap-2"
-                >
+                <span key={index} className="relative flex items-center gap-2">
                   <span className={`w-3 h-3 rounded-full ${lang.color}`} />
                   {lang.name}
                 </span>

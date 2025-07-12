@@ -1,10 +1,10 @@
-import HeroSection from "@/components/ui/HeroSection";
-import MainSection from "@/components/ui/MainSection";
+import HeroSection from "@/components/ui/componentPage/HeroSection";
+import MainSection from "@/components/ui/componentPage/MainSection";
 import React from "react";
 
 const Home = () => {
   return (
-    <div className="flex gap-[2rem] justify-center">
+    <div className="flex gap-[4rem] pt-4 justify-center">
       <HeroSection />
       <MainSection />
     </div>
