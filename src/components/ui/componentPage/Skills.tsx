@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "./button";
+import { Button } from "../button";
 
 const Skills = () => {
   const skills = [
@@ -127,12 +127,12 @@ const Skills = () => {
   ];
   return (
     <div className="flex flex-col gap-4">
-      <span className="border w-fit px-4 rounded border-neutral-800 text-slate-400">
+      <span className="w-fit px-4 rounded bg-neutral-900 border border-slate-800">
         Skills
       </span>
       <div className="flex gap-4 flex-wrap items-center">
         {skills.map((skill, index) => (
-          <Button className="bg-slate-800" key={index}>
+          <Button className="bg-slate-900" key={index}>
             {skill.icon}
             {skill.name}
           </Button>
