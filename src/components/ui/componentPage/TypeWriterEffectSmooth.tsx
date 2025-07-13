@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { motion, stagger, useAnimate, useInView } from "motion/react";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 
 export const TypewriterEffect = ({
   words,
@@ -26,23 +26,28 @@ export const TypewriterEffect = ({
 
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
+
+  const animateText = useCallback(() => {
+    animate(
+      "span",
+      {
+        display: "inline-block",
+        opacity: 1,
+        width: "fit-content",
+      },
+      {
+        duration: 0.3,
+        delay: stagger(0.1),
+        ease: "easeInOut",
+      }
+    );
+  }, [animate]);
+
   useEffect(() => {
     if (isInView) {
-      animate(
-        "span",
-        {
-          display: "inline-block",
-          opacity: 1,
-          width: "fit-content",
-        },
-        {
-          duration: 0.3,
-          delay: stagger(0.1),
-          ease: "easeInOut",
-        }
-      );
+      animateText();
     }
-  }, [isInView]);
+  }, [isInView, animateText]);
 
   const renderWords = () => {
     return (
@@ -69,6 +74,7 @@ export const TypewriterEffect = ({
       </motion.div>
     );
   };
+
   return (
     <div
       className={cn(
@@ -117,6 +123,7 @@ export const TypewriterEffectSmooth = ({
       text: word.text.split(""),
     };
   });
+
   const renderWords = () => {
     return (
       <div>
@@ -173,7 +180,6 @@ export const TypewriterEffectSmooth = ({
         }}
         transition={{
           duration: 0.8,
-
           repeat: Infinity,
           repeatType: "reverse",
         }}
