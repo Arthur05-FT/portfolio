@@ -7,15 +7,18 @@ import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-b
 
 const ContactForm = () => {
   return (
-    <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
-      <div className="flex gap-4">
+    <form
+      className="flex flex-col gap-4 w-full"
+      onSubmit={(e) => e.preventDefault()}
+    >
+      <div className="flex flex-col sm:flex-row gap-4">
         <Input
-          className="border-neutral-400"
+          className="border-neutral-400 flex-1"
           type="email"
           placeholder="johndoe@gmail.com"
         />
         <Input
-          className="border-neutral-400"
+          className="border-neutral-400 flex-1"
           type="text"
           placeholder="John Doe"
         />
@@ -26,9 +29,12 @@ const ContactForm = () => {
         type="text"
         placeholder="Subject message"
       />
-      <Textarea className="border-neutral-400 h-52" placeholder="Typing..." />
-      <InteractiveHoverButton className=" w-fit self-end cursor-none border-neutral-400">
-        Sent the message
+      <Textarea
+        className="border-neutral-400 h-32 sm:h-40 lg:h-52 resize-none"
+        placeholder="Typing..."
+      />
+      <InteractiveHoverButton className="w-full sm:w-fit self-center sm:self-end cursor-none border-neutral-400 px-6 py-2">
+        Send the message
       </InteractiveHoverButton>
     </form>
   );

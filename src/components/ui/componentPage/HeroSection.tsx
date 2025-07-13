@@ -2,21 +2,22 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Facebook, Github, Twitter, Youtube } from "lucide-react";
+import { Github, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
-import { TextAnimate } from "@/components/magicui/text-animate";
 
 const HeroSection = () => {
   const [isHover, setIsHover] = React.useState(0);
+
   const languages = [
     {
       name: "Deutsch B1",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="20"
+          height="20"
           viewBox="0 0 36 36"
+          className="w-5 h-5 sm:w-6 sm:h-6"
         >
           <path
             fill="#FFCD05"
@@ -35,9 +36,10 @@ const HeroSection = () => {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="20"
+          height="20"
           viewBox="0 0 36 36"
+          className="w-5 h-5 sm:w-6 sm:h-6"
         >
           <path
             fill="#00247D"
@@ -56,68 +58,84 @@ const HeroSection = () => {
       ),
     },
   ];
+
   const socialLinks = [
     {
       id: 1,
       name: "Twitter",
-      icon: <Twitter />,
+      icon: <Twitter className="w-5 h-5 sm:w-6 sm:h-6" />,
       href: "/",
       username: "@arthurJord05",
     },
     {
       id: 2,
       name: "Github",
-      icon: <Github />,
+      icon: <Github className="w-5 h-5 sm:w-6 sm:h-6" />,
       href: "/",
       username: "Arthur05-FT",
     },
     {
-      id: 4,
+      id: 3,
       name: "Youtube",
-      icon: <Youtube />,
+      icon: <Youtube className="w-5 h-5 sm:w-6 sm:h-6" />,
       href: "/",
       username: "MrPatate Dev",
     },
   ];
+
   return (
-    <div>
-      <div className="w-[15rem] flex rounded-full border-4 border-blue-600 h-[15rem] bg-[url(/profile.png)] bg-center bg-cover"></div>
-      <div className="flex flex-col items-center text-start mt-[0.9rem]">
-        <span className="w-full">Arthur Jordy</span>
-        <span className="w-full text-sm text-slate-400">
+    <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[400px] mx-auto lg:mx-0">
+      <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-60 lg:h-60 flex rounded-full border-4 border-blue-600 bg-[url(/profile.png)] bg-center bg-cover mx-auto lg:mx-0"></div>
+
+      <div className="flex flex-col items-center lg:items-start text-center lg:text-left mt-4">
+        <span className="text-lg sm:text-xl lg:text-2xl font-semibold">
+          Arthur Jordy
+        </span>
+        <span className="text-sm sm:text-base text-slate-400 mt-1">
           Fullstack developer
         </span>
       </div>
-      <Button className="bg-blue-600 w-fit cursor-none hover:bg-blue-700 transition mt-2 duration-100">
-        arthurfotso.bfkg@gmail.com
+
+      <Button className="bg-blue-600 w-full sm:w-fit cursor-none hover:bg-blue-700 transition mt-3 duration-100 text-xs sm:text-sm px-3 py-2 mx-auto lg:mx-0 block">
+        <span className="truncate">arthurfotso.bfkg@gmail.com</span>
       </Button>
-      <div className="mt-[1rem]">
-        <span className="text-xs">20 ans - Cameroun, Bafoussam</span>
-        <div className="mt-4 flex flex-col gap-2">
-          <span className="font-bold">Languages</span>
-          {languages.map((lang, index) => (
-            <div key={index} className="flex items-center gap-2">
-              {lang.icon}
-              <span>{lang.name}</span>
-            </div>
-          ))}
-          <div className="flex flex-col gap-2 mt-2">
-            <span className="font-bold">Links</span>
-            <div className="flex items-center gap-2">
+
+      <div className="mt-4 lg:mt-6 text-center lg:text-left">
+        <span className="text-xs sm:text-sm text-neutral-400">
+          20 ans - Cameroun, Bafoussam
+        </span>
+
+        <div className="mt-4 flex flex-col gap-3">
+          <span className="font-bold text-sm sm:text-base">Languages</span>
+          <div className="flex flex-col gap-2">
+            {languages.map((lang, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center lg:justify-start gap-2 text-sm sm:text-base"
+              >
+                {lang.icon}
+                <span>{lang.name}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-3 mt-4">
+            <span className="font-bold text-sm sm:text-base">Links</span>
+            <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-3">
               {socialLinks.map((link) => (
                 <Link
                   key={link.id}
                   href={link.href}
-                  className="flex items-center p-1.5 rounded-full gap-2 hover:bg-blue-700 transition cursor-none duration-100"
+                  className="flex items-center p-2 sm:p-2.5 rounded-full hover:bg-blue-700 transition cursor-none duration-100 relative"
                   onMouseEnter={() => setIsHover(link.id)}
                   onMouseLeave={() => setIsHover(0)}
                 >
                   {link.icon}
 
                   {isHover === link.id && (
-                    <div className="fixed bottom-4 right-4 px-3 py-1 bg-slate-800 text-white rounded z-50">
-                      {link.name}
-                      <span className="block text-xs text-slate-400">
+                    <div className="hidden sm:block fixed bottom-4 right-4 px-3 py-2 bg-slate-800 text-white rounded z-50 shadow-lg">
+                      <span className="text-sm font-medium">{link.name}</span>
+                      <span className="block text-xs text-slate-400 mt-1">
                         {link.username}
                       </span>
                     </div>
