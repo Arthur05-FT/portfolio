@@ -132,7 +132,7 @@ const Skills = () => {
       </span>
       <div className="flex gap-4 flex-wrap items-center">
         {skills.map((skill, index) => (
-          <Button className="bg-slate-900" key={index}>
+          <Button className="bg-slate-900 cursor-none" key={index}>
             {skill.icon}
             {skill.name}
           </Button>

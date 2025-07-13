@@ -38,7 +38,7 @@ const Header = () => {
           onClick={() => setActive(link.id)}
         >
           <Link
-            className="flex gap-2 items-center h-full pb-3"
+            className="flex cursor-none gap-2 items-center h-full pb-3"
             href={link.href}
           >
             <span>{link.svg}</span>

@@ -2,6 +2,7 @@ import React from "react";
 import Skills from "./Skills";
 import Project from "./Project";
 import { TypewriterEffectSmooth } from "./TypeWriterEffectSmooth";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 const MainSection = () => {
   return (
@@ -21,19 +22,18 @@ const MainSection = () => {
             ]}
           />
         </h1>
-        <p>
-          My name is{" "}
-          <span className="text-blue-600 text-lg italic">Arthur</span>, a
-          passionate web developer, currently pursuing a Bachelor's degree in
-          Information Technology - Application Development at ESA Namur. Since
-          my high school years, web development has become much more than just
-          an interest: it's a true vocation. Over time, I've honed my skills in
-          both front-end and back-end development, which now allows me to design
-          complete, high-performance, and modern web applications. Beyond
-          coding, I'm also interested in interface design and user experience,
-          because I'm convinced that a website's success depends as much on its
-          technical fluidity as on its ability to meet the needs of its users.
-        </p>
+        <TextAnimate animation="slideUp" by="word">
+          My name is Arthur, a passionate web developer, currently pursuing a
+          Bachelor's degree in Information Technology - Application Development
+          at ESA Namur. Since my high school years, web development has become
+          much more than just an interest: it's a true vocation. Over time, I've
+          honed my skills in both front-end and back-end development, which now
+          allows me to design complete, high-performance, and modern web
+          applications. Beyond coding, I'm also interested in interface design
+          and user experience, because I'm convinced that a website's success
+          depends as much on its technical fluidity as on its ability to meet
+          the needs of its users.
+        </TextAnimate>
         <Skills />
       </div>
       <Project />

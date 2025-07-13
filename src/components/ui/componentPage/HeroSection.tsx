@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Facebook, Github, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 const HeroSection = () => {
   const [isHover, setIsHover] = React.useState(0);
@@ -87,7 +88,7 @@ const HeroSection = () => {
           Fullstack developer
         </span>
       </div>
-      <Button className="bg-blue-600 w-fit cursor-pointer hover:bg-blue-700 transition mt-2 duration-100">
+      <Button className="bg-blue-600 w-fit cursor-none hover:bg-blue-700 transition mt-2 duration-100">
         arthurfotso.bfkg@gmail.com
       </Button>
       <div className="mt-[1rem]">
@@ -107,7 +108,7 @@ const HeroSection = () => {
                 <Link
                   key={link.id}
                   href={link.href}
-                  className="flex items-center p-1.5 rounded-full gap-2 hover:bg-blue-700 transition duration-100"
+                  className="flex items-center p-1.5 rounded-full gap-2 hover:bg-blue-700 transition cursor-none duration-100"
                   onMouseEnter={() => setIsHover(link.id)}
                   onMouseLeave={() => setIsHover(0)}
                 >
