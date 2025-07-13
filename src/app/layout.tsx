@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import { GridSmallBackgroundDemo } from "@/components/ui/componentPage/GridSmallBackgroundDemo";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           </div>
           <div>{children}</div>
         </div>
+        <SmoothCursor />
       </body>
     </html>
   );

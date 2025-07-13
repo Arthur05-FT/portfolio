@@ -3,7 +3,7 @@ import React from "react";
 
 export function GridSmallBackgroundDemo() {
   return (
-    <div className="fixed flex h-screen -z-50 top-0 left-0 w-full items-center justify-center bg-white dark:bg-black">
+    <div className="fixed flex h-screen -z-50 top-0 bottom-0 left-0 w-full items-center justify-center bg-white dark:bg-black">
       <div
         className={cn(
           "absolute inset-0",
