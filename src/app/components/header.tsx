@@ -7,7 +7,10 @@ const Header = () => {
     <header className="flex justify-between py-4">
       <Link href={"/"}>Arthur.com</Link>
       <div className="flex items-center gap-10">
-        <Link className="hover:underline" href={"/"}>
+        <Link
+          className="hover:underline"
+          href={"https://blog-six-phi-58.vercel.app/"}
+        >
           Blog
         </Link>
         <button className="cursor-pointer">
