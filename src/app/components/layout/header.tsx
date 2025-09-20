@@ -1,4 +1,4 @@
-import { Moon } from "lucide-react";
+import { Languages } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -14,7 +14,7 @@ const Header = () => {
           Blog
         </Link>
         <button className="cursor-pointer">
-          <Moon size={20} />
+          <Languages size={20} />
         </button>
       </div>
     </header>

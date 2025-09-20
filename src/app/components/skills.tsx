@@ -4,12 +4,41 @@ import Section from "./layout/section";
 
 const Skills = () => {
   const skills = [
-    { name: "Next.js", link: "/", description: "" },
-    { name: "React.js", link: "/", description: "" },
-    { name: "Tailwind CSS", link: "/", description: "" },
-    { name: "Typescript", link: "/", description: "" },
-    { name: "Prisma", link: "/", description: "" },
-    { name: "Postgresql", link: "/", description: "" },
+    {
+      name: "Next.js",
+      link: "/",
+      description: "Build full-stack apps with SSR, routing, and APIs.",
+    },
+    {
+      name: "React.js",
+      link: "/",
+      description: "Create dynamic, reusable UI components.",
+    },
+    {
+      name: "Tailwind CSS",
+      link: "/",
+      description: "Style interfaces quickly with utility classes.",
+    },
+    {
+      name: "Typescript",
+      link: "/",
+      description: "Add type safety to avoid bugs.",
+    },
+    {
+      name: "Prisma",
+      link: "/",
+      description: "Query and manage the database easily.",
+    },
+    {
+      name: "Postgresql",
+      link: "/",
+      description: "Store and organize app data.",
+    },
+    {
+      name: "Java",
+      link: "/",
+      description: "Develop robust backend or enterprise apps.",
+    },
   ];
   return (
     <Section title="What I use">
@@ -22,7 +51,7 @@ const Skills = () => {
             <Link className="underline w-fit" href={item.link}>
               {item.name}
             </Link>
-            <span className="opacity-60"></span>
+            <span className="opacity-60">{item.description}</span>
           </li>
         ))}
       </ul>

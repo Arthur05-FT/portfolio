@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/layout/footer";
+import { ShootingStars } from "./components/ui/shooting-stars";
+import { StarsBackground } from "./components/ui/stars-background";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -18,7 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <div className="flex items-center flex-col">{children}</div>
+        <div className="relative flex items-center flex-col grow pb-32">
+          <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+            <ShootingStars />
+            <StarsBackground />
+          </div>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

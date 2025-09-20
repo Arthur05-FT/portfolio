@@ -16,7 +16,7 @@ const Me = () => {
   return (
     <div className="flex flex-col gap-5">
       <div className="flex gap-4 items-center">
-        <div className="w-[6rem] h-[6rem] rounded-full bg-amber-50"></div>
+        <div className="w-[7rem] h-[7rem] rounded-full bg-amber-50 bg-[url(/profile.jpg)] bg-cover bg-center"></div>
         <div className="flex flex-col gap-1 font-semibold">
           <span className={`${inconsolata.className} capitalize text-5xl`}>
             arthur tchatchouang
