@@ -13,7 +13,7 @@ const Header = () => {
         >
           Blog
         </Link>
-        <button className="cursor-pointer">
+        <button className="cursor-pointer p-2 rounded-lg hover:bg-[#2c2c2c] transition">
           <Languages size={20} />
         </button>
       </div>
