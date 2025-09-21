@@ -36,7 +36,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="flex items-center bg-[#1e1e1e] flex-col gap-10 py-8">
+    <footer className="flex items-center bg-[#1e1e1e] flex-col gap-10 py-14">
       <div className="flex flex-col gap-10">
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
@@ -69,7 +69,7 @@ const Footer = () => {
           <span>© 2025 Arthur Tchatchouang. All rights reserved.</span>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
