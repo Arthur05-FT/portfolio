@@ -12,12 +12,8 @@ const Footer = () => {
   ];
   const articles = [
     { name: "Next.js", link: "https://blog-six-phi-58.vercel.app/next.js" },
-    { name: "React.js", link: "https://blog-six-phi-58.vercel.app/react.js" },
     { name: "Java", link: "https://blog-six-phi-58.vercel.app/java" },
-    {
-      name: "PostgreSQL",
-      link: "https://blog-six-phi-58.vercel.app/postgresql",
-    },
+    { name: "Others", link: "https://blog-six-phi-58.vercel.app/others" },
   ];
   const projects = [
     { name: "0xBlitz", link: "/" },
