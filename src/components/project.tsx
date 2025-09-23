@@ -4,24 +4,22 @@ import Section from "./layout/section";
 
 const Project = () => {
   const projects = [
-    { name: "0xBlitz", link: "/", desciption: "A social network." },
+    {
+      name: "Blitz",
+      link: "/",
+      desciption: "Working as a team has never been easier.",
+    },
     {
       name: "Soft",
       link: "/",
       desciption: "Manage and plan your trips safely.",
     },
     {
-      name: "PodplayAI",
+      name: "PodFly",
       link: "/",
-      desciption: "A music recommendation system.",
+      desciption: "Let us compare for you.",
     },
     { name: "Bket", link: "/", desciption: "A eCommerce platform." },
-    {
-      name: "Zik",
-      link: "/",
-      desciption:
-        "Whether you're in the car, at work, just listen to some music.",
-    },
   ];
   return (
     <Section title="What I've built">

@@ -10,24 +10,9 @@ const Skills = () => {
       description: "Build full-stack apps with SSR, routing, and APIs.",
     },
     {
-      name: "React.js",
-      link: "/",
-      description: "Create dynamic, reusable UI components.",
-    },
-    {
       name: "Tailwind CSS",
       link: "/",
       description: "Style interfaces quickly with utility classes.",
-    },
-    {
-      name: "Typescript",
-      link: "/",
-      description: "Add type safety to avoid bugs.",
-    },
-    {
-      name: "Prisma",
-      link: "/",
-      description: "Query and manage the database easily.",
     },
     {
       name: "Postgresql",
@@ -35,7 +20,7 @@ const Skills = () => {
       description: "Store and organize app data.",
     },
     {
-      name: "Java",
+      name: "Java and Python",
       link: "/",
       description: "Develop robust backend or enterprise apps.",
     },
@@ -48,9 +33,7 @@ const Skills = () => {
             key={index}
             className="relative pl-5 w-fit flex gap-4 before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-white/60"
           >
-            <Link className="underline w-fit" href={item.link}>
-              {item.name}
-            </Link>
+            <span>{item.name}</span>
             <span className="opacity-60">{item.description}</span>
           </li>
         ))}

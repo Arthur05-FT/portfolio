@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./components/layout/header";
-import Me from "./components/me";
-import Project from "./components/project";
-import Skills from "./components/skills";
+import Header from "../components/layout/header";
+import Me from "../components/me";
+import Project from "../components/project";
+import Skills from "../components/skills";
 
 const Home = () => {
   return (
