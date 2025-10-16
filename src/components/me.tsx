@@ -25,7 +25,7 @@ const Me = () => {
         </div>
       </div>
       <div className="flex flex-col gap-2">
-        <p className="italic opacity-60">
+        <p className="italic opacity:90 dark:opacity-60">
           Student at ESA Namur. I am passionate about building products that are
           tailored to customers and optimized for their needs.
         </p>

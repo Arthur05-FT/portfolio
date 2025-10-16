@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Section from "./layout/section";
 
 const Skills = () => {
@@ -31,10 +30,12 @@ const Skills = () => {
         {skills.map((item, index) => (
           <li
             key={index}
-            className="relative pl-5 w-fit flex gap-4 before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-white/60"
+            className="relative pl-5 flex gap-4 before:content-[''] before:absolute before:left-0 before:top-2 before:w-[0.4rem] before:h-[0.4rem] before:rounded-full before:bg-foreground"
           >
             <span>{item.name}</span>
-            <span className="opacity-60">{item.description}</span>
+            <span className="opacity-90 dark:opacity-60">
+              {item.description}
+            </span>
           </li>
         ))}
       </ul>

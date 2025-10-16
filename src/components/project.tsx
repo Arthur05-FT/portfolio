@@ -27,12 +27,14 @@ const Project = () => {
         {projects.map((item, index) => (
           <li
             key={index}
-            className="relative pl-5 flex gap-4 before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-white/60"
+            className="relative pl-5 flex gap-4 before:content-[''] before:absolute before:left-0 before:top-2 before:w-[0.4rem] before:h-[0.4rem] before:rounded-full before:bg-foreground"
           >
             <Link className="underline" href={item.link}>
               {item.name}
             </Link>
-            <span className="opacity-60">{item.desciption}</span>
+            <span className="opacity-90 dark:opacity-60">
+              {item.desciption}
+            </span>
           </li>
         ))}
       </ul>

@@ -1,6 +1,7 @@
-import { Languages } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import ButtonLanguage from "../ui/button-language";
+import { ModeToggle } from "../ui/mode-toggle";
 
 const Header = () => {
   return (
@@ -13,9 +14,10 @@ const Header = () => {
         >
           Blog
         </Link>
-        <button className="cursor-pointer p-2 rounded-lg hover:bg-[#2c2c2c] transition">
-          <Languages size={20} />
-        </button>
+        <div className="flex items-center gap-5">
+          <ButtonLanguage />
+          <ModeToggle />
+        </div>
       </div>
     </header>
   );
