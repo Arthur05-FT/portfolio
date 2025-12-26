@@ -5,7 +5,7 @@ import { ModeToggle } from "../ui/mode-toggle";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center p-4">
+    <header className="flex justify-between items-center py-4">
       <Link href={"/"}>Arthur.com</Link>
       <div className="flex items-center gap-10">
         <Link
