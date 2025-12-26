@@ -12,7 +12,7 @@ const Section = ({
 }) => {
   return (
     <div className="flex flex-col gap-3 w-fit">
-      <h3 className={`${inconsolata.className} w-fit text-2xl font-semibold`}>
+      <h3 className={`${inconsolata.className} w-fit text-3xl font-bold`}>
         {title}
       </h3>
       {children}

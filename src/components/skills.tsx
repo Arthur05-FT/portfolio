@@ -28,14 +28,13 @@ const Skills = () => {
     <Section title="What I use">
       <ul className="list-disc flex flex-col gap-2 w-fit">
         {skills.map((item, index) => (
-          <li
-            key={index}
-            className="relative pl-5 flex gap-4 before:content-[''] before:absolute before:left-0 before:top-2 before:w-[0.4rem] before:h-[0.4rem] before:rounded-full before:bg-foreground"
-          >
-            <span>{item.name}</span>
-            <span className="opacity-90 dark:opacity-60">
+          <li key={index}>
+              <div>
+                  <span>{item.name} :</span>
+                  <span className="opacity-90 ml-1 dark:opacity-60">
               {item.description}
             </span>
+              </div>
           </li>
         ))}
       </ul>

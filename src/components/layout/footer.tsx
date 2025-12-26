@@ -32,8 +32,8 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="flex items-center bg-foreground dark:bg-secondary dark:text-foreground text-secondary flex-col gap-10 py-14">
-      <div className="flex flex-col gap-10">
+    <footer className="flex px-10 bg-foreground dark:bg-secondary dark:text-foreground text-secondary flex-col gap-10 py-14">
+      <div className="flex mx-auto max-w-xl flex-col gap-10">
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
             <h3 className="font-semibold mb-1">Articles</h3>

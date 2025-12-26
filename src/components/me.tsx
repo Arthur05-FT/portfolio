@@ -15,13 +15,13 @@ const Me = () => {
   ];
   return (
     <div className="flex flex-col gap-5">
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-4 items-center flex-col">
         <div className="w-[7rem] aspect-square rounded-full bg-amber-50 bg-[url(/profile.jpg)] bg-cover bg-center"></div>
-        <div className="flex flex-col gap-1 font-semibold">
+        <div className="flex flex-col items-center gap-2 font-semibold text-center">
           <span className={`${inconsolata.className} capitalize text-5xl`}>
             arthur tchatchouang
           </span>
-          <span>Fullstack developer</span>
+          <span className="border border-white w-fit rounded-full py-1 px-4">Fullstack developer</span>
         </div>
       </div>
       <div className="flex flex-col gap-2">

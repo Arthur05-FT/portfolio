@@ -6,7 +6,7 @@ import Skills from "../components/skills";
 
 const Home = () => {
   return (
-    <div className="flex gap-10 flex-col w-[35%]">
+    <div className="flex gap-10 flex-col px-5 max-w-xl mx-auto">
       <Header />
       <Me />
       <Project />
