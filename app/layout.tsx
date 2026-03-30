@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import Hero from "@/components/layout/hero";
+import Navbar from "@/components/layout/navbar";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -46,9 +47,12 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
       >
-        <body className="min-h-full flex flex-col">
+        <body className="min-h-full flex">
           <Hero />
-          {children}
+          <div className="flex flex-1 flex-col">
+            <Navbar />
+            {children}
+          </div>
         </body>
       </ThemeProvider>
     </html>
