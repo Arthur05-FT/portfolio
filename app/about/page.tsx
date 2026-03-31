@@ -1,3 +1,4 @@
+import Code from "@/components/about/synthaxe-highlighter";
 import Python from "@/components/icons/python.icon";
 import { Separator } from "@/components/ui/separator";
 import { Inter } from "next/font/google";
@@ -23,6 +24,7 @@ const About = () => {
         experiences. Currently, I'm focused on building accessible,
         human-centered products.
       </p>
+      <Code />
     </div>
   );
 };
