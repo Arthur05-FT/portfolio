@@ -1,10 +1,13 @@
 "use client";
 
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
 import React from "react";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const jetbrains_mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 const Navbar = () => {
   const links = [
@@ -17,7 +20,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = React.useState("/arthur-fullstack");
 
   return (
-    <nav className={"flex border-b " + inter.className}>
+    <nav className={"flex border-b " + jetbrains_mono.className}>
       {links.map((link) => (
         <Link
           key={link.href}
