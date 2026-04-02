@@ -47,7 +47,7 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
       >
-        <body className="min-h-full flex">
+        <body className="min-h-full overflow-hidden flex">
           <Hero />
           <div className="flex flex-1 flex-col">
             <Navbar />
