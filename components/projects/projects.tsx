@@ -28,7 +28,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const Projects = () => {
   return (
-    <div className="grid grid-cols-3 divide-x border [&>*]:border-b [&>*:nth-last-child(-n+3)]:border-b-0 mt-10">
+    <div className="grid grid-cols-3 divide-x border [&>*]:border-b [&>*:nth-last-child(-n+3)]:border-b-0 my-4">
       {projects.map((project, index) => (
         <a
           key={project.id + index}

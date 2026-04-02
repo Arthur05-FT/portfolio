@@ -1,23 +1,10 @@
+import Skills from "@/components/about/skills";
 import Code from "@/components/about/synthaxe-highlighter";
-import { FileTypeNestjs } from "@/components/icons/nest";
-import { FileTypeLightNext } from "@/components/icons/next";
-import { FileTypePgsql } from "@/components/icons/postgresql";
-import { FileTypeLightPrisma } from "@/components/icons/prisma";
-import Python from "@/components/icons/python";
-import { FileTypeTailwind } from "@/components/icons/tailwind";
 import Projects from "@/components/projects/projects";
 import { Separator } from "@/components/ui/separator";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
-const skills = [
-  <FileTypeLightNext fontSize={30} key="next" />,
-  <Python fontSize={30} key="python" />,
-  <FileTypeNestjs fontSize={30} key="nestjs" />,
-  <FileTypeLightPrisma fontSize={30} key="prisma" />,
-  <FileTypeTailwind fontSize={30} key="tailwind" />,
-  <FileTypePgsql fontSize={30} key="pgsql" />,
-];
 
 const About = () => {
   return (
@@ -40,6 +27,7 @@ const About = () => {
           SKILL
         </h1>
       </div>
+      <Skills />
       <div className="flex items-center gap-4">
         <h1 className="font-light text-xs tracking-widest whitespace-nowrap">
           PROJECTS
@@ -47,6 +35,17 @@ const About = () => {
         <Separator className="flex-1" />
       </div>
       <Projects />
+      <div className="flex items-center gap-4">
+        <Separator className="flex-1" />
+        <h1
+          className={
+            "font-light text-xs uppercase text-muted-foreground tracking-widest whitespace-nowrap " +
+            inter.className
+          }
+        >
+          Last Articles
+        </h1>
+      </div>
     </div>
   );
 };

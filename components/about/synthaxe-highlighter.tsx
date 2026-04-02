@@ -31,7 +31,7 @@ export default function Code() {
   };
 
   return (
-    <div className="font-light border my-10">
+    <div className="font-light border my-4">
       <div className="flex items-center justify-between border-b">
         <div className="text-xs pl-5">
           {(["python", "javascript", "java"] as CodeSnippets[]).map((lang) => (
