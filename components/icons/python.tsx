@@ -1,13 +1,14 @@
-type PythonProps = {
-  size: string;
-};
+import { SVGProps } from "react";
+import { JSX } from "react/jsx-runtime";
 
-const Python = ({ size }: PythonProps) => (
+const Python = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
   <svg
-    width={size}
-    height={size}
+    width="1em"
+    height="1em"
+    key={props.key}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    {...props}
   >
     <path
       fill="#0288d1"

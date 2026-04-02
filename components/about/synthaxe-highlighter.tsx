@@ -38,7 +38,7 @@ export default function Code() {
             <button
               key={lang}
               className={
-                "py-3 px-4 capitalize " +
+                "py-3 px-4 " +
                 (tab === lang
                   ? "border-b border-b-foreground"
                   : "text-muted-foreground hover:text-foreground transition-colors")
